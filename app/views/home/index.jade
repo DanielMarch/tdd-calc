@@ -2,3 +2,36 @@ extends ../shared/template
 
 block content
   h1= title
+  form(method='POST', name='add', action='/add')
+    input.one(type='number', name='input1')
+    span +
+    input.two(type='number', name='input2')
+    button#add Add
+  form(method='POST', name='sub', action='/subtract')
+    input.one(type='number', name='input1')
+    span -
+    input.two(type='number', name='input2')
+    button#sub Subtract
+  form(method='POST', name='multiply', action='/multiply')
+    input.one(type='number', name='input1')
+    span *
+    input.two(type='number', name='input2')
+    button#multiply Multiply
+  form(method='POST', name='divide', action='/divide')
+    input.one(type='number', name='input1')
+    span /
+    input.two(type='number', name='input2')
+    button#divide Divide
+  form(method='POST', name='add', action='/power')
+    input.one(type='number', name='input1')
+    span power
+    input.two(type='number', name='input2')
+    button#pow Power
+  form(method='POST', name='add', action='/sum')
+    input.one(type='text', name='input1')
+    button#sum Sum
+  form(method='POST', name='addfrac', action='/frac')
+    input.one(type='text', name='input1')
+    button#sum Add Frac
+
+    #output
